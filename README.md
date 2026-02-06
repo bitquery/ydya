@@ -205,3 +205,35 @@ What is the average rating for products by categories?
 what is the most rated book ?
 which words in the book title causes maximum rating?
 ```
+
+## AI my API
+
+### Step 1 Setup account on Bitquery IDE
+
+1. Go to [Bitquery IDE](https://ide.bitquery.io/) and register
+2. Get API key to access
+
+### Step 2 Setup account on zuplo service
+
+1. Go to (https://zuplo.com/) and register
+
+### Step 3 Create API gateway for GraphQL endpoint from Bitquery
+
+( follow the procedure from the video ...)
+
+### Step 4 Connect extension to Claude Desktop as URL and try queries
+
+### Step 5 Use inspector to test it
+
+```
+npx @modelcontextprotocol/inspector --server-url 'https://my-api-main-1546619.d2.zuplo.dev/mcp?apiKey=<YOUR KEY>'
+```
+
+### Step 6 Connect to the remote MCP server in Claude Desktop using the URL
+
+Do not forget to use full URL with 'apiKey' parameter in query!
+
+
+
+
+
