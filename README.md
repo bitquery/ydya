@@ -132,7 +132,12 @@ Add there methods for full text search of products by words.
 1. Go to Claude Desktop in Chat folder and try to buy goods, for example by chat:
 
 ```
-I go to Mexico by plane want to buy some goods for this trip
+I go to Mexico tommorow, fly by plane and want to buy something for this trip, for entertainment and health
+I want to buy your list sunscreen cream, sleep mask and cheap Headphones. Propose an order for me
+yes, i want to buy these
+email is <email>
+Send to <address>
+yes
 ```
 
 2. Ask it to sell the selected goods for you, provide address and make an order.
@@ -182,4 +187,21 @@ copy / paste / execute files
 
 ```
 python3 -m pip install mcp-clickhouse
+```
+
+### Step 2 Install in Claude Desktop
+
+1. Setup MCP extension in Claude Desktop the same way as we did above, but from the folder analytics.
+
+2. Check that extension is initialized
+
+### Step 3 Vibe Analyse
+
+try use propts like:
+
+```
+What analytics can i do with Clickhouse server?
+What is the average rating for products by categories?
+what is the most rated book ?
+which words in the book title causes maximum rating?
 ```
