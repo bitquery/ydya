@@ -233,7 +233,3 @@ npx @modelcontextprotocol/inspector --server-url 'https://my-api-main-1546619.d2
 
 Do not forget to use full URL with 'apiKey' parameter in query!
 
-
-
-
-

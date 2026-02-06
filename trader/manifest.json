@@ -1,0 +1,25 @@
+{
+  "manifest_version": "0.2",
+  "name": "trader-mcp",
+  "version": "1.0.0",
+  "description": "MCP server to trade crypto tokens using analytics and AI",
+  "author": {
+    "name": "aleksey"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": [
+        "${__dirname}/server.py"
+      ],
+      "env": {
+        "BITQUERY_TOKEN": "your_bitquery_token",
+        "BSC_RPC_URL": "https://bsc-dataseed.binance.org/",
+        "WALLET_PRIVATE_KEY": "892384908293402389482394892348028340823094820934890234"
+      }
+    }
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "trader": {
+      "command": "python3",
+      "args": ["server.py"],
+      "env": {
+        "BITQUERY_TOKEN": "your_bitquery_token",
+        "BSC_RPC_URL": "https://bsc-dataseed.binance.org/",
+        "WALLET_PRIVATE_KEY": ""
+      }
+    }
+  }
+}
