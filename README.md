@@ -15,12 +15,18 @@ Content is grouped by the projects:
 * [Python 3](https://www.python.org/downloads/)
 * [Claude Desktop](https://claude.com/download)
 * [Docker](https://docs.docker.com/get-started/get-docker/)
-
+* 
 ## Amazon Killer
 
 Goal is to create e-shop where you can select and buy products using LLM chat
 
 ### Step 1 Setting up Database
+
+Checkout the project locally: 
+
+```
+git clone https://github.com/bitquery/ydya.git
+```
 
 1. Run MySQL server under docker
 ```
