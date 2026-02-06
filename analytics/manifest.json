@@ -1,0 +1,30 @@
+{
+  "manifest_version": "0.2",
+  "name": "clickhouse-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for clickhouse",
+  "author": {
+    "name": "aleksey"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "ecommerce_mcp_server.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "mcp_clickhouse.main"
+      ],
+      "env": {
+        "CLICKHOUSE_HOST": "localhost",
+        "CLICKHOUSE_PORT": "8123",
+        "CLICKHOUSE_USER": "username",
+        "CLICKHOUSE_PASSWORD": "password",
+        "CLICKHOUSE_SECURE": "false",
+        "CLICKHOUSE_VERIFY": "false",
+        "CLICKHOUSE_CONNECT_TIMEOUT": "30",
+        "CLICKHOUSE_SEND_RECEIVE_TIMEOUT": "30"
+      }
+    }
+  }
+}

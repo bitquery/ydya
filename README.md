@@ -5,7 +5,7 @@ Materials for the master class "Your Data - Your AI"
 Content is grouped by the projects:
 
 * Amazon Killer
-* Analytics on LLM
+* Vibe Analytics
 * AI my API
 * AI my Crypto
 
@@ -15,7 +15,7 @@ Content is grouped by the projects:
 * [Python 3](https://www.python.org/downloads/)
 * [Claude Desktop](https://claude.com/download)
 * [Docker](https://docs.docker.com/get-started/get-docker/)
-* 
+
 ## Amazon Killer
 
 Goal is to create e-shop where you can select and buy products using LLM chat
@@ -107,7 +107,9 @@ Add there methods for full text search of products by words.
 
 3. make sure it created files requirements.txt and server.py
 
-4. Open Claude Desktop, go to Settings > Extensions
+### Step 3 Connect LLM to MCP server
+
+1. Open Claude Desktop, go to Settings > Extensions
    Press button Advanced Settings
    Press button Install Unpacked Extention
 
@@ -119,20 +121,53 @@ Add there methods for full text search of products by words.
 
     To fix it, change "python3" to the correct path of python, for which you already install all required packages
 
-5. Make sure it is started. Extentions now should show ecommerce-mcp extentions with a number of tools
+2. Make sure it is started. Extentions now should show ecommerce-mcp extentions with a number of tools
 
     Press Configure to see the tools.
 
-6. Go to Claude Desktop in Chat folder and try to buy goods, for example by chat:
+3. Go to Claude Desktop in Chat folder and try to buy goods, for example by chat:
 
 ```
 I go to Mexico by plane want to buy some goods for this trip
 ```
 
-7. Ask it to sell the selected goods for you, provide address and make an order.
+4. Ask it to sell the selected goods for you, provide address and make an order.
 
-8. Check MySQL log and  order creation
+5. Check MySQL log and  order creation
 
 ```
 SELECT * FROM my_store.orders;
+```
+
+
+## Vibe Analytics
+
+Create application to make analytics of user recommendations using our analytical database on Clickhouse.
+
+### Step 1 Create analytical database on Clickhouse
+
+1. Install clickhouse
+
+```
+docker pull clickhouse/clickhouse-server
+
+docker run -d --name clickhouse-server -e CLICKHOUSE_DB=amazon -e CLICKHOUSE_USER=username -e CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1 -e CLICKHOUSE_PASSWORD=password -p 8123:8123 -p 9000:9000 clickhouse/clickhouse-server
+```
+
+2. Import product reviews
+
+```
+docker exec -it clickhouse-server clickhouse-client --user username --password password
+```
+
+copy / paste / execute files
+
+* analytics/schema.sql
+* analytics/import.sql
+
+
+3. Install https://github.com/ClickHouse/mcp-clickhouse
+
+```
+python3 -m pip install mcp-clickhouse
 ```
