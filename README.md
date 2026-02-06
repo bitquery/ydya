@@ -7,7 +7,6 @@ Content is grouped by the projects:
 * Amazon Killer
 * Vibe Analytics
 * AI my API
-* AI my Crypto
 
 
 ## Pre Requisites
