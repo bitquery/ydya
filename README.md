@@ -92,3 +92,47 @@ and execute queries in client:
 ```
 SELECT * FROM my_store.products LIMIT 10;
 ```
+
+### Step 2 Create code for MCP server
+
+1. Open Claude Desktop, switch to Code tab and connect it to local ydya project
+
+2. Enter the prompt 
+```
+I have a database created in data/schema.sql for e-commerce. 
+Generate MCP server in Python that will allow AI chat to interactwith this database, 
+provide recommendations on products and generate orders for them in interactive chat.
+Add there methods for full text search of products by words.
+```
+
+3. make sure it created files requirements.txt and server.py
+
+4. Open Claude Desktop, go to Settings > Extensions
+   Press button Advanced Settings
+   Press button Install Unpacked Extention
+
+    Select folder of ydya project and install it.
+
+    In case you got an error, check the logs.
+
+    One of the problem can be that it should have a path to correct executable of python.
+
+    To fix it, change "python3" to the correct path of python, for which you already install all required packages
+
+5. Make sure it is started. Extentions now should show ecommerce-mcp extentions with a number of tools
+
+    Press Configure to see the tools.
+
+6. Go to Claude Desktop in Chat folder and try to buy goods, for example by chat:
+
+```
+I go to Mexico by plane want to buy some goods for this trip
+```
+
+7. Ask it to sell the selected goods for you, provide address and make an order.
+
+8. Check MySQL log and  order creation
+
+```
+SELECT * FROM my_store.orders;
+```

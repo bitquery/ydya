@@ -1,0 +1,27 @@
+{
+  "manifest_version": "0.2",
+  "name": "ecommerce-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for e-commerce database - search products, get recommendations, manage customers, and create orders",
+  "author": {
+    "name": "aleksey"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": [
+        "${__dirname}/server.py"
+      ],
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "user",
+        "MYSQL_PASSWORD": "pwd",
+        "MYSQL_NAME": "my_store"
+      }
+    }
+  },
+  "license": "MIT"
+}
