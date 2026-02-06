@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "default-server": {
+        "command": "python3",
+        "args": [
+          "server.py"
+        ],
+        "env": {
+          "DB_HOST": "localhost",
+          "DB_PORT": "3306",
+          "DB_USER": "user",
+          "DB_PASSWORD": "pwd",
+          "DB_NAME": "my_store"
+        }
+    }
+  }
+}
+
+

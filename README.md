@@ -93,6 +93,8 @@ and execute queries in client:
 SELECT * FROM my_store.products LIMIT 10;
 ```
 
+
+
 ### Step 2 Create code for MCP server
 
 1. Open Claude Desktop, switch to Code tab and connect it to local ydya project
@@ -125,18 +127,28 @@ Add there methods for full text search of products by words.
 
     Press Configure to see the tools.
 
-3. Go to Claude Desktop in Chat folder and try to buy goods, for example by chat:
+### Step 4 Chat with LLM
+
+1. Go to Claude Desktop in Chat folder and try to buy goods, for example by chat:
 
 ```
 I go to Mexico by plane want to buy some goods for this trip
 ```
 
-4. Ask it to sell the selected goods for you, provide address and make an order.
+2. Ask it to sell the selected goods for you, provide address and make an order.
 
-5. Check MySQL log and  order creation
+3. Check MySQL log and  order creation
 
 ```
 SELECT * FROM my_store.orders;
+```
+
+### Step 5 (optional) Debugging tools for MCP
+
+1. Use file mcp.json with [MCP inspector](https://modelcontextprotocol.io/docs/tools/inspector)
+
+```
+npx @modelcontextprotocol/inspector --config mcp.json
 ```
 
 
